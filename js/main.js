@@ -9,7 +9,7 @@ const locoScroll = new LocomotiveScroll({
 locoScroll.on("scroll", ScrollTrigger.update);
 
 
-ScrollTrigger.scrollerProxy("main-container", {
+ScrollTrigger.scrollerProxy("#main-container", {
   scrollTop(value) {
     return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
   }, 
@@ -89,7 +89,7 @@ gsap.to(arrowLine, {
     start: "top 30%", // Start when the SVG enters the viewport
     end: "top 0%", 
     scrub: true,
-    markers:true
+   
     
   },
 });
@@ -108,6 +108,7 @@ gsap.fromTo(
       start: "top 20%", // Arrowhead appears after the line is mostly drawn
       end: "top 0%",
       scrub: true,
+      
       
     },
   }
